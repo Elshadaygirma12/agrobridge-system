@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.env
+.venv/
+venv/
+kukunet/
+node_modules/
+dist/
+build/
+db.sqlite3
+backend/media/*
+!backend/media/.gitkeep
+.vscode/
+.DS_Store
