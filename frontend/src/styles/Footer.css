@@ -1,0 +1,147 @@
+/* ═══════════════════════════════════════════════
+   FOOTER STYLING
+═══════════════════════════════════════════════ */
+
+.main-footer {
+  background-color: #163e2c; /* Slightly lighter forest green */
+  color: #d8f3dc;
+  padding: 4rem 2rem 2rem;
+  font-family: inherit;
+  position: relative;
+  z-index: 10;
+  border-top: 1px solid rgba(82, 183, 136, 0.15);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  max-width: 320px;
+}
+
+.footer-logo-text {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.02em;
+}
+
+.footer-logo-img {
+  height: 38px;
+  object-fit: contain;
+}
+
+.footer-description {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(216, 243, 220, 0.7);
+}
+
+.footer-links-group {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.footer-links-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-links-col h4 {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer-links-col a {
+  color: rgba(216, 243, 220, 0.7);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.footer-links-col a:hover {
+  color: #95d5b2;
+  transform: translateX(4px);
+}
+
+.footer-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  width: 100%;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: rgba(216, 243, 220, 0.6);
+}
+
+.footer-copy {
+  margin: 0;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-bottom-links a {
+  color: rgba(216, 243, 220, 0.6);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: #95d5b2;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .main-footer {
+    padding: 3rem 1.5rem 1.5rem;
+  }
+  
+  .footer-top {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  
+  .footer-links-group {
+    gap: 2.5rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
