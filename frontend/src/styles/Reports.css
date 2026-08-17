@@ -1,0 +1,356 @@
+.reports-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.reports-header h1 {
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.reports-subtitle {
+  color: #666;
+  font-size: 1rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f0f0f0;
+}
+
+/* Filters Section */
+.reports-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  text-transform: capitalize;
+}
+
+.filter-group select {
+  padding: 10px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #333;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.filter-group select:focus {
+  border-color: #16a34a;
+}
+
+.filter-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.btn-reset {
+  padding: 10px 20px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-reset:hover {
+  background: #f5f5f5;
+}
+
+.btn-generate {
+  padding: 10px 20px;
+  border: none;
+  background: #16a34a;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-generate:hover {
+  background: #15803d;
+}
+
+/* Charts Section */
+.reports-charts {
+  display: flex;
+  gap: 24px;
+}
+
+.chart-card {
+  flex: 1;
+}
+
+.chart-card.full-width {
+  width: 100%;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.chart-header h2 {
+  font-size: 1.25rem;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.badge {
+  background: #f0fdf4;
+  color: #16a34a;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid #bbf7d0;
+}
+
+.chart-description {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+.chart-wrapper {
+  background: #fcfcfc;
+  border-radius: 8px;
+  padding: 20px 10px;
+  border: 1px solid #f0f0f0;
+}
+
+/* Summary Section */
+.reports-summary {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.summary-header h2 {
+  font-size: 1.25rem;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.summary-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn-export {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.btn-export:hover {
+  background: #f5f5f5;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.summary-table th {
+  text-align: left;
+  padding: 16px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #666;
+  text-transform: uppercase;
+  border-bottom: 1px solid #eee;
+  letter-spacing: 0.05em;
+}
+
+.summary-table td {
+  padding: 16px;
+  font-size: 0.95rem;
+  color: #333;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.summary-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Error Card */
+.error-card {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  padding: 16px 24px;
+}
+
+.error-card strong {
+  color: #dc2626;
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .reports-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filter-actions {
+    margin-left: 0;
+    justify-content: flex-end;
+  }
+}
+
+/* Print-only Header styles for screen (hidden) */
+.print-only-header {
+  display: none;
+}
+
+/* @media print styles */
+@media print {
+  /* Hide navbar, footer, sidebar, and non-printable elements */
+  nav,
+  .navbar,
+  footer,
+  .footer,
+  .reports-filters,
+  .summary-header .summary-actions,
+  button,
+  .btn-export {
+    display: none !important;
+  }
+
+  /* Reset layout constraints for printing */
+  body,
+  html,
+  #root,
+  .app-container,
+  .main-content,
+  .reports-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background: #fff !important;
+    color: #000 !important;
+    box-shadow: none !important;
+  }
+
+  /* Show the print-only header */
+  .print-only-header {
+    display: block !important;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #16a34a;
+    padding-bottom: 12px;
+  }
+
+  .print-logo {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #16a34a;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .print-report-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #111;
+    margin-top: 6px;
+  }
+
+  .print-report-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 0.9rem;
+    color: #444;
+    margin-top: 10px;
+  }
+
+  /* Hide screen headers */
+  .reports-header {
+    display: none !important;
+  }
+
+  /* Format cards for print */
+  .card {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+    background: #fff !important;
+    padding: 20px !important;
+    margin-bottom: 24px !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Ensure the table looks neat when printed */
+  .summary-table th {
+    background-color: #f8fafc !important;
+    border-bottom: 2px solid #cbd5e1 !important;
+    color: #000 !important;
+  }
+
+  .summary-table td {
+    border-bottom: 1px solid #e2e8f0 !important;
+    color: #000 !important;
+  }
+
+  /* Page setup (A4/Letter portrait) */
+  @page {
+    size: portrait;
+    margin: 1.5cm;
+  }
+}
